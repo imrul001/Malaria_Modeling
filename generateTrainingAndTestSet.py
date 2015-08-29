@@ -17,6 +17,18 @@ def getFeatureList(argv, length):
 		features.append(int(sys.argv[n]));
 	return features;
 
+def getRowDynamically(row):
+	total = "";
+	num_cols = len(row);
+	for i in range(0,num_cols):
+		if(i == 0):
+			total = row[i]+",";
+		if(i > 0 and i < (num_cols -1)):
+			total = total +row[i]+",";
+		if(i == (num_cols -1)):
+			total = total +row[i]+"\n";	
+	return total;
+
 def generateTestData(reader, iterationNo, splitSize, fileLength, isLast, features):
 	start = 0; end = 0;count = 0;
 	if(isLast == 1):
@@ -27,21 +39,11 @@ def generateTestData(reader, iterationNo, splitSize, fileLength, isLast, feature
 	fileOpen = open("Test-"+str(iterationNo)+".csv","wb");
 	for row in reader:
 		if(count==0):
-			fileOpen.write(row[0]+","+row[1]+","+row[2]+","+row[3]+","+row[4]+","+
-			row[5]+","+row[6]+","+row[7]+","+row[8]+","+row[9]+","+row[10]+","+
-			row[11]+","+row[12]+","+row[13]+","+row[14]+","+row[15]+","+
-			row[16]+","+row[17]+","+row[18]+","+row[19]+","+row[20]+","+
-			row[21]+","+row[22]+","+row[23]+","+row[24]+","+row[25]+","+
-			row[26]+","+row[27]+"\n");
+			fileOpen.write(getRowDynamically(row));
 		if(start<=count):
 			for i in range(0,len(features)):
 				row[features[i]] = "*";
-			fileOpen.write(row[0]+","+row[1]+","+row[2]+","+row[3]+","+row[4]+","+
-			row[5]+","+row[6]+","+row[7]+","+row[8]+","+row[9]+","+row[10]+","+
-			row[11]+","+row[12]+","+row[13]+","+row[14]+","+row[15]+","+
-			row[16]+","+row[17]+","+row[18]+","+row[19]+","+row[20]+","+
-			row[21]+","+row[22]+","+row[23]+","+row[24]+","+row[25]+","+
-			row[26]+","+row[27]+"\n");
+			fileOpen.write(getRowDynamically(row));
 		if(end==count):
 			break;
 		count = count+1;
@@ -58,19 +60,9 @@ def generateTrainingSet(reader, iterationNo, splitSize, fileLength, isLast):
 	# sys.stdout.write(str(start)+" "+str(end)+""+"\n");
 	for row in reader:
 		if(count==0):
-			fileOpen.write(row[0]+","+row[1]+","+row[2]+","+row[3]+","+row[4]+","+
-			row[5]+","+row[6]+","+row[7]+","+row[8]+","+row[9]+","+row[10]+","+
-			row[11]+","+row[12]+","+row[13]+","+row[14]+","+row[15]+","+
-			row[16]+","+row[17]+","+row[18]+","+row[19]+","+row[20]+","+
-			row[21]+","+row[22]+","+row[23]+","+row[24]+","+row[25]+","+
-			row[26]+","+row[27]+"\n");
+			fileOpen.write(getRowDynamically(row));
 		if((count < start and count!=0) or (count > end)):
-			fileOpen.write(row[0]+","+row[1]+","+row[2]+","+row[3]+","+row[4]+","+
-			row[5]+","+row[6]+","+row[7]+","+row[8]+","+row[9]+","+row[10]+","+
-			row[11]+","+row[12]+","+row[13]+","+row[14]+","+row[15]+","+
-			row[16]+","+row[17]+","+row[18]+","+row[19]+","+row[20]+","+
-			row[21]+","+row[22]+","+row[23]+","+row[24]+","+row[25]+","+
-			row[26]+","+row[27]+"\n");
+			fileOpen.write(getRowDynamically(row));
 		if(count==fileLength):
 			break;
 		count = count+1;
