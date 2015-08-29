@@ -14,7 +14,7 @@ Here
 
 Example:
 =======
-command: python generateTrainingAndTestSet.py 10 model_dataSet_ex-3.csv 8 9 12 14 15 18 20 21 24
+Command: python generateTrainingAndTestSet.py 10 model_dataSet_ex-3.csv 8 9 12 14 15 18 20 21 24
 
 It will generate 10 case files in pairs(like (Train-1,Test-1),(Train-2,Test-2) and so on) in the same directory of the script file. The resulting Training and Test cases of the above command are saved in the Training-Test-Set/ directory of this repository. 
 
