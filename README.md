@@ -1,4 +1,4 @@
-# Script to generate Training and Test Case for Malaria Modeling
+# Script for generating Training and Test Cases for Malaria Modeling
 
 Usage:
 =====
