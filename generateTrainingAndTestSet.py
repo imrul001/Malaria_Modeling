@@ -32,11 +32,13 @@ def getRowDynamically(row):
 def generateTestData(reader, iterationNo, splitSize, fileLength, isLast, features):
 	start = 0; end = 0;count = 0;
 	if(isLast == 1):
-		start = splitSize+1; end = fileLength;
+		start = splitSize + 1; end = fileLength;
 	else:
 		start = splitSize * (iterationNo - 1) + 1;
 		end = start + splitSize -1;
 	fileOpen = open("Test-"+str(iterationNo)+".csv","wb");
+	# print "Test";
+	# sys.stdout.write(str(start)+" "+str(end)+" "+str(fileLength)+" "+str(splitSize)+"\n");
 	for row in reader:
 		if(count==0):
 			fileOpen.write(getRowDynamically(row));
@@ -52,12 +54,13 @@ def generateTestData(reader, iterationNo, splitSize, fileLength, isLast, feature
 def generateTrainingSet(reader, iterationNo, splitSize, fileLength, isLast):
 	start = 0; end = 0;count = 0;
 	if(isLast == 1):
-		start = splitSize+1; end = fileLength;
+		start = splitSize + 1; end = fileLength;
 	else:
 		start = splitSize * (iterationNo - 1) + 1;
 		end = start + splitSize -1;
 	fileOpen = open("Train-"+str(iterationNo)+".csv","wb");
-	# sys.stdout.write(str(start)+" "+str(end)+""+"\n");
+	# print "Train";
+	# sys.stdout.write(str(start)+" "+str(end)+" "+str(fileLength)+" "+str(splitSize)+"\n");
 	for row in reader:
 		if(count==0):
 			fileOpen.write(getRowDynamically(row));
@@ -83,6 +86,7 @@ else:
 	features = list();
 	features = getFeatureList(sys.argv, length);
 	hasExtra = 0;
+	isLast = 0;
 	if(fileLength % k == 0):
 		eachSplitSize = fileLength/k;
 	else:
@@ -90,12 +94,14 @@ else:
 		eachSplitSize = fileLength/k;
 
 	for n in range(0,k):
-		with open(fileName, 'rb') as csvfile1:
-			reader = csv.reader(csvfile1, delimiter=',')
-			generateTestData(reader, n+1, eachSplitSize, fileLength, hasExtra, features);
+		if(n == (k-1) and hasExtra == 1):
+			isLast = 1;
 		with open(fileName, 'rb') as csvfile2:	
 			reader1 = csv.reader(csvfile2, delimiter=',')
-			generateTrainingSet(reader1, n+1, eachSplitSize, fileLength, hasExtra);
+			generateTrainingSet(reader1, n+1, eachSplitSize, fileLength, isLast);
+		with open(fileName, 'rb') as csvfile1:
+			reader = csv.reader(csvfile1, delimiter=',')
+			generateTestData(reader, n+1, eachSplitSize, fileLength, isLast, features);
 		
 	# print length;
 	# sys.stdout.write("each split : ");
