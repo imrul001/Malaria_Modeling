@@ -32,7 +32,8 @@ def getRowDynamically(row):
 def generateTestData(reader, iterationNo, splitSize, fileLength, isLast, features):
 	start = 0; end = 0;count = 0;
 	if(isLast == 1):
-		start = splitSize + 1; end = fileLength;
+		start = splitSize * (iterationNo - 1) + 1; 
+		end = fileLength;
 	else:
 		start = splitSize * (iterationNo - 1) + 1;
 		end = start + splitSize -1;
@@ -54,7 +55,8 @@ def generateTestData(reader, iterationNo, splitSize, fileLength, isLast, feature
 def generateTrainingSet(reader, iterationNo, splitSize, fileLength, isLast):
 	start = 0; end = 0;count = 0;
 	if(isLast == 1):
-		start = splitSize + 1; end = fileLength;
+		start = splitSize * (iterationNo - 1) + 1; 
+		end = fileLength;
 	else:
 		start = splitSize * (iterationNo - 1) + 1;
 		end = start + splitSize -1;
