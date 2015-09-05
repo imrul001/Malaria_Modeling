@@ -16,7 +16,7 @@ Example:
 =======
 Command: python generateTrainingAndTestSet.py 10 model_dataSet-causal-indep_updated.csv 10 11 12 13 14 15 16 17 18 20 21 22 23 24 25 26 27 28 30 31 32 33 34 35 36 37 38
 
-It will generate 10 case files in pairs(like (Train-1,Test-1),(Train-2,Test-2) and so on) in the same directory of the data file. The resulting Training and Test cases of the above command are saved in the Training-Test-Set/ directory of this repository. 
+It will generate 10 case files in pairs(like (Train-1,Test-1),(Train-2,Test-2) and so on) in the current directory. The resulting Training and Test cases of the above command are saved in the Training-Test-Set/ directory of this repository. 
 
 
 
