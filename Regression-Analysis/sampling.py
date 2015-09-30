@@ -42,7 +42,7 @@ def getRandomState(data):
 		state = 4;
 	return state;
 
-# This method get the midpoint by each state(0,1,2,3,4)
+# This method gets the midpoint by each state(0,1,2,3,4)
 def getTheMidPoint(state):
 	# Predefined Ranges
 	# range_s0 = "0-0.0005";
