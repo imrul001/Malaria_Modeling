@@ -1,0 +1,10 @@
+poisson
+=======
+
+                     Estimate Std. Error z value Pr(>|z|)    
+(Intercept)         -2.593352   0.005040 -514.55   <2e-16 ***
+M_NDVI_w1            0.186465   0.001869   99.75   <2e-16 ***
+M_Dist_to_Border_w1  0.077873   0.002338   33.30   <2e-16 ***
+M_Dist_to_Stream_w1  0.213831   0.001851  115.55   <2e-16 ***
+M_Slope_Rainfall_w1  0.186333   0.001852  100.59   <2e-16 ***
+M_Stream_Density_w1  0.191685   0.001867  102.70   <2e-16 ***
