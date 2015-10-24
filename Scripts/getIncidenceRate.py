@@ -48,33 +48,38 @@ for j in range(0,length):
 		c = 0;
 		for row in reader1:
 			if(c!=0):
-				inc_rate_w0 = float(row[11]);
-				inc_rate_w1 = float(row[19]);
-				inc_rate_w2 = float(row[26]);
-				inc_rate_w3 = float(row[33]);
+				inc_rate_w0 = 0.0
+				inc_rate_w1 = 0.0
+				inc_rate_w2 = 0.0
+				inc_rate_w3 = 0.0
+				inc_rate_w4 = 0.0
 				flag = 0;
 				if (village[j] == row[3] and row[0]==str(2012)):
-					inc_rate_w0 = float(row[11])/float(pop12[j]);
-					inc_rate_w1 = float(row[19])/float(pop12[j]);
-					inc_rate_w2 = float(row[26])/float(pop12[j]);
-					inc_rate_w3 = float(row[33])/float(pop12[j]);
+					inc_rate_w0 = float(row[11])/float(pop12[j])*100;
+					inc_rate_w1 = float(row[19])/float(pop12[j])*100;
+					inc_rate_w2 = float(row[26])/float(pop12[j])*100;
+					inc_rate_w3 = float(row[33])/float(pop12[j])*100;
+					inc_rate_w4 = float(row[42])/float(pop12[j])*100;
 					flag = 1;
 				if (village[j] == row[3] and row[0]==str(2013)):
-					inc_rate_w0 = float(row[11])/float(pop13[j]);
-					inc_rate_w1 = float(row[19])/float(pop13[j]);
-					inc_rate_w2 = float(row[26])/float(pop13[j]);
-					inc_rate_w3 = float(row[33])/float(pop13[j]);
+					inc_rate_w0 = float(row[11])/float(pop13[j])*100;
+					inc_rate_w1 = float(row[19])/float(pop13[j])*100;
+					inc_rate_w2 = float(row[26])/float(pop13[j])*100;
+					inc_rate_w3 = float(row[33])/float(pop13[j])*100;
+					inc_rate_w4 = float(row[42])/float(pop13[j])*100;
 					flag = 1;
 				if (village[j] == row[3] and row[0]==str(2014)):
-					inc_rate_w0 = float(row[11])/float(pop14[j]);
-					inc_rate_w1 = float(row[19])/float(pop14[j]);
-					inc_rate_w2 = float(row[26])/float(pop14[j]);
-					inc_rate_w3 = float(row[33])/float(pop14[j]);
+					inc_rate_w0 = float(row[11])/float(pop14[j])*100;
+					inc_rate_w1 = float(row[19])/float(pop14[j])*100;
+					inc_rate_w2 = float(row[26])/float(pop14[j])*100;
+					inc_rate_w3 = float(row[33])/float(pop14[j])*100;
+					inc_rate_w4 = float(row[42])/float(pop14[j])*100;
 					flag = 1;
 				row[11] = str(inc_rate_w0);
 				row[19] = str(inc_rate_w1);
 				row[26] = str(inc_rate_w2);
 				row[33] = str(inc_rate_w3);
+				row[42] = str(inc_rate_w4);
 				if(flag == 1):
 					sys.stdout.write(getRowDynamically(row));
 			if(c==0 and m==0):
