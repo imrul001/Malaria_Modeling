@@ -1,0 +1,181 @@
+
+Couldn't completely enter Netica into the Windows Registry (App Paths info skipped), because: Access is denied.  (try running Netica once by right-clicking Netica executable icon and choosing 'Run as Administrator').
+
+Netica 5.18 Win (CoGFIn64), (C) 1992-2014 Norsys Software Corp.
+
+The license being used is +HaddawyP/MahidolU/120,142-6/(security part removed).
+It enables the graphical interface, but not the programming interface.
+It also enables GIS and 2D analysis capabilities.
+The file location of the executable running this program is:  C:\Netica\Netica 518\Netica.exe
+
+Command Line:  "D:\masterstudent\Modeling\learned-1.neta"
+Compiled to 27 cliques, with total table size (including sepsets) of 1.7213e+08.
+Do you want to continue compiling/updating even though the tables will require 688.5 MB?  --> Yes
+Case file for testing:  D:\masterstudent\Modeling\Test-Cases\Test-1.csv
+Read 138 cases, and used 138 of them to test net.
+
+For Malaria_m1:
+--------------
+
+Confusion:
+  ...............Predicted..............
+  0 to 0  0.5 to  1.5 to  4.5 to  13.5 t    Actual
+  ------  ------  ------  ------  ------    ------
+      27       4       0       0       0    0 to 0.5
+      13       5       0       0       0    0.5 to 1.5
+       9       7       1       0       0    1.5 to 4.5
+       6       6       2       5       3    4.5 to 13.5
+       1       2       6      20      21    13.5 to 297
+
+Testing Real Value:
+  Absolute error:      mean = 13.51        max = 81.18         rms = 22.9
+  Error / std dev:     mean = 25.08 %      max = 164.5 %
+  Distribution within:  0-1 std dev      1-2 std dev     2-3 std dev     >3 std dev
+                        99.3 %           0.725 %         0 %             0 %
+
+Error rate = 57.25%
+
+Scoring Rule Results:
+  Logarithmic loss = 1.356
+  Quadratic loss   = 0.6986
+  Spherical payoff = 0.5467
+
+Calibration:
+  0 to 0.5   0-2:      0    | 2-40:     13.9 | 40-50:    46.2 | 50-70:    53.8 | 
+  0.5 to 1.5 0-10:     0    | 10-25:    3.7  | 25-30:    20.8 | 30-40:    32.3 | 40-100:   11.1 | 
+  1.5 to 4.5 0-15:     22.2 | 15-25:    8.33 | 25-30:    9.09 | 30-100:   9.52 | 
+  4.5 to 13. 0-2:      6.25 | 2-5:      15.2 | 5-30:     27.6 | 30-40:    15.9 | 
+  13.5 to 29 0-0.2:    0    | 0.2-0.5:  4.17 | 0.5-5:    3.33 | 5-30:     81.5 | 30-50:    79.2 | 50-100:   87.5 | 
+  Total      0-0.2:    0    | 0.2-0.5:  3.13 | 0.5-1:    0    | 1-2:      4.17 | 2-5:      10.7 | 5-10:     5.13 | 10-15:    20.5 | 15-20:    7.14 | 20-25:    29.8 | 25-30:    21.3 | 
+             30-40:    30.5 | 40-50:    36.4 | 50-70:    58.3 | 
+
+Times Surprised (percentage):
+               .................Predicted Probability....................
+  State        < 1%             < 10%             > 90%             > 99%
+  -----        ----             -----             -----             -----
+  0 to 0.5     0.00 (0/17)      0.00 (0/56)       0.00 (0/0)        0.00 (0/0)
+  0.5 to 1.5   0.00 (0/0)       0.00 (0/38)       0.00 (0/0)        0.00 (0/0)
+  1.5 to 4.5   0.00 (0/0)       0.00 (0/0)        0.00 (0/0)        0.00 (0/0)
+  4.5 to 13.   0.00 (0/23)     10.29 (7/68)       0.00 (0/0)        0.00 (0/0)
+  13.5 to 29   1.59 (1/63)      4.76 (4/84)       0.00 (0/0)        0.00 (0/0)
+  Total        0.97 (1/103)     4.47 (11/246)     0.00 (0/0)        0.00 (0/0)
+
+Sensitivity of Test:
+  0 to 0.5   0     100    | 50    45.2   | 70    0      | 100   0      | 
+  0.5 to 1.5 0     100    | 40    11.1   | 100   0      | 
+  1.5 to 4.5 0     100    | 15    52.9   | 40    0      | 100   0      | 
+  4.5 to 13. 0     100    | 15    45.5   | 40    0      | 100   0      | 
+  13.5 to 29 0     100    | 25    66     | 40    18     | 60    0      | 100   0      | 
+
+-------------------------------------------------------------------------------
+
+For Malaria_m2:
+--------------
+
+Confusion:
+  ...............Predicted..............
+  0 to 0  0.5 to  1.5 to  4.5 to  13.5 t    Actual
+  ------  ------  ------  ------  ------    ------
+      25       6       0       0       0    0 to 0.5
+      14       3       0       0       0    0.5 to 1.5
+      12       5       1       0       0    1.5 to 4.5
+       6      11       4       0       0    4.5 to 13.5
+       6      32       7       0       6    13.5 to 297
+
+Testing Real Value:
+  Absolute error:      mean = 9.936        max = 103           rms = 18.35
+  Error / std dev:     mean = 27.23 %      max = 387.1 %
+  Distribution within:  0-1 std dev      1-2 std dev     2-3 std dev     >3 std dev
+                        95.7 %           3.62 %          0 %             0.725 %
+
+Error rate = 74.64%
+
+Scoring Rule Results:
+  Logarithmic loss = 1.783
+  Quadratic loss   = 0.8372
+  Spherical payoff = 0.4132
+
+Calibration:
+  0 to 0.5   0-20:     0    | 20-40:    14.3 | 40-50:    23.1 | 50-60:    57.6 | 
+  0.5 to 1.5 0-30:     13.2 | 30-40:    13.2 | 40-100:   0    | 
+  1.5 to 4.5 0-20:     18.8 | 20-25:    14.3 | 25-30:    2.56 | 
+  4.5 to 13. 0-5:      13.9 | 5-15:     11.8 | 15-25:    21.9 | 
+  13.5 to 29 0-0.5:    0    | 0.5-1:    3.23 | 1-10:     60   | 10-25:    70.8 | 25-100:   100  | 
+  Total      0-0.5:    0    | 0.5-1:    3.23 | 1-2:      6.06 | 2-5:      22.8 | 5-10:     50   | 10-15:    23.4 | 15-20:    19   | 20-25:    14.3 | 25-30:    11.8 | 30-40:    22.2 | 
+             40-50:    17.1 | 50-60:    57.6 | 
+
+Times Surprised (percentage):
+               .................Predicted Probability....................
+  State        < 1%             < 10%             > 90%             > 99%
+  -----        ----             -----             -----             -----
+  0 to 0.5     0.00 (0/0)       0.00 (0/8)        0.00 (0/0)        0.00 (0/0)
+  0.5 to 1.5   0.00 (0/0)       0.00 (0/0)        0.00 (0/0)        0.00 (0/0)
+  1.5 to 4.5   0.00 (0/0)       0.00 (0/0)        0.00 (0/0)        0.00 (0/0)
+  4.5 to 13.   0.00 (0/0)      13.25 (11/83)      0.00 (0/0)        0.00 (0/0)
+  13.5 to 29   1.59 (1/63)     25.93 (28/108)     0.00 (0/0)        0.00 (0/0)
+  Total        1.59 (1/63)     19.60 (39/199)     0.00 (0/0)        0.00 (0/0)
+
+Sensitivity of Test:
+  0 to 0.5   0     100    | 50    61.3   | 60    0      | 100   0      | 
+  0.5 to 1.5 0     100    | 30    41.2   | 100   0      | 
+  1.5 to 4.5 0     100    | 20    33.3   | 100   0      | 
+  4.5 to 13. 0     100    | 5     52.4   | 20    9.52   | 100   0      | 
+  13.5 to 29 0     100    | 10    45.1   | 15    29.4   | 25    11.8   | 100   0      | 
+
+-------------------------------------------------------------------------------
+
+For Malaria_m3:
+--------------
+
+Confusion:
+  ...............Predicted..............
+  0 to 0  0.5 to  1.5 to  4.5 to  13.5 t    Actual
+  ------  ------  ------  ------  ------    ------
+      27       3       0       0       0    0 to 0.5
+      18       0       0       0       0    0.5 to 1.5
+      15       2       0       0       0    1.5 to 4.5
+      13       7       0       0       0    4.5 to 13.5
+      15      38       0       0       0    13.5 to 297
+
+Testing Real Value:
+  Absolute error:      mean = 12.15        max = 113.5         rms = 22.62
+  Error / std dev:     mean = 40.69 %      max = 308.3 %
+  Distribution within:  0-1 std dev      1-2 std dev     2-3 std dev     >3 std dev
+                        87.7 %           8.7 %           2.9 %           0.725 %
+
+Error rate = 80.43%
+
+Scoring Rule Results:
+  Logarithmic loss = 2.131
+  Quadratic loss   = 0.9217
+  Spherical payoff = 0.3405
+
+Calibration:
+  0 to 0.5   0-30:     0    | 30-40:    16.7 | 40-50:    22   | 50-60:    53.8 | 
+  0.5 to 1.5 0-30:     20.7 | 30-40:    8    | 40-100:   0    | 
+  1.5 to 4.5 0-20:     21.3 | 20-25:    0    | 25-100:   0    | 
+  4.5 to 13. 0-5:      12.7 | 5-10:     20.5 | 10-100:   10   | 
+  13.5 to 29 0-1:      1.56 | 1-5:      64.4 | 5-15:     76.9 | 15-100:   100  | 
+  Total      0-1:      1.56 | 1-2:      11.5 | 2-5:      36.7 | 5-10:     35.1 | 10-15:    39.3 | 15-20:    20.4 | 20-25:    0    | 25-30:    15.8 | 30-40:    10.5 | 40-50:    20   | 
+             50-60:    53.8 | 
+
+Times Surprised (percentage):
+               .................Predicted Probability....................
+  State        < 1%             < 10%             > 90%             > 99%
+  -----        ----             -----             -----             -----
+  0 to 0.5     0.00 (0/0)       0.00 (0/0)        0.00 (0/0)        0.00 (0/0)
+  0.5 to 1.5   0.00 (0/0)       0.00 (0/0)        0.00 (0/0)        0.00 (0/0)
+  1.5 to 4.5   0.00 (0/0)       0.00 (0/0)        0.00 (0/0)        0.00 (0/0)
+  4.5 to 13.   0.00 (0/0)      15.25 (18/118)     0.00 (0/0)        0.00 (0/0)
+  13.5 to 29   1.56 (1/64)     33.07 (42/127)     0.00 (0/0)        0.00 (0/0)
+  Total        1.56 (1/64)     24.49 (60/245)     0.00 (0/0)        0.00 (0/0)
+
+Sensitivity of Test:
+  0 to 0.5   0     100    | 50    46.7   | 60    0      | 100   0      | 
+  0.5 to 1.5 0     100    | 30    33.3   | 100   0      | 
+  1.5 to 4.5 0     100    | 20    0      | 100   0      | 
+  4.5 to 13. 0     100    | 5     50     | 10    10     | 100   0      | 
+  13.5 to 29 0     100    | 5     43.4   | 10    20.8   | 15    5.66   | 100   0      | 
+
+-------------------------------------------------------------------------------
+Save File As:  D:\masterstudent\Modeling\best-3.txt
